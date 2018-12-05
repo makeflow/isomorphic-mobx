@@ -1,6 +1,9 @@
 {
   "name": "@makeflow/isomorphic-mobx",
   "version": "0.0.1",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "MobX or Frash APIs adaptively exported according to environment",
   "repository": "https://github.com/makeflow/isomorphic-mobx.git",
   "author": "Dizy Zeng <zengziyang@mufan.com>",
