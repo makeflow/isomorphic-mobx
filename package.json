@@ -1,0 +1,33 @@
+{
+  "name": "@makeflow/isomorphic-mobx",
+  "version": "0.0.1",
+  "description": "MobX or Frash APIs adaptively exported according to environment",
+  "repository": "https://github.com/makeflow/isomorphic-mobx.git",
+  "author": "Dizy Zeng <zengziyang@mufan.com>",
+  "license": "MIT",
+  "scripts": {
+    "build:library": "tslint -p src/library && rimraf bld/library && tsc -p src/library",
+    "lint:library": "tslint -p src/library",
+    "test:library": "yarn build:library && yarn lint:library",
+    "test": "yarn test:library"
+  },
+  "browser": "bld/library/browser.js",
+  "main": "bld/library/node.js",
+  "types": "bld/library/node.d.ts",
+  "files": [
+    "bld/library",
+    "!*.js.map"
+  ],
+  "devDependencies": {
+    "@magicspace/configs": "^0.1.44",
+    "prettier": "^1.15.2",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.11.0",
+    "tslint-language-service": "^0.9.9",
+    "typescript": "^3.2.1"
+  },
+  "dependencies": {
+    "frash": "^0.0.1",
+    "mobx": "^5.7.0"
+  }
+}
